@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-# newyoubetteryou
 
-A new Flutter project.
-=======
 # next_day_better_you
 A Flutter app that helps you build better daily habits, track your progress, and stay motivated to improve every day.
 A personal growth and daily progress tracker built with Flutter.
@@ -23,4 +19,4 @@ Language: Dart
 State Management: Provider (MVVM Architecture)
 
 UI Toolkit: Material Design + Custom Widgets
->>>>>>> 6c475a124c78ed54c4c57b7e1654f8d416133732
+
