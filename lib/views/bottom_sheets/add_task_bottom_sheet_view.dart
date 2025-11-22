@@ -13,7 +13,7 @@ class AddTaskBottomSheetView extends StatelessWidget {
     return Consumer<AppViewModel>(builder:(context, viewModel, child,) {
       return Padding(
         padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
-        child: Container(height:300, child: 
+        child: SizedBox(height:300, child: 
         Center(
           child: SizedBox(
             height: 40,

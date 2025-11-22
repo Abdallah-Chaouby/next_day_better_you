@@ -8,69 +8,102 @@ class TaskInfoView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Consumer<AppViewModel>(builder: (context, viewModel, child){
-      return Container(
-        margin: EdgeInsets.fromLTRB(15, 10, 15, 10),
+      return Padding( // Using Padding instead of margin on the container is often cleaner
+        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
         child: Row(
           children: [
-        // Total Tasks
-        
+            // Max Streak Card (Replaced Total Tasks)
             Expanded(
               flex: 1,
               child: Container(
                 decoration: BoxDecoration(
                   color: viewModel.clrLvl2,
                   borderRadius: BorderRadius.circular(20)),
-                  child: Column(
-                    children: [
-                      Expanded(
-                        flex: 2,
-                        child: Align(
-                                    alignment: Alignment.center,
-                                    
-                                    
-                                    child: FittedBox(child: Text("${viewModel.numTasks}", style: TextStyle(fontSize: 28, color: viewModel.clrLvl3, fontWeight: FontWeight.bold)))),
+                child: Column(
+                  children: [
+                    Expanded(
+                      flex: 2,
+                      child: Align(
+                        alignment: Alignment.center,
+                        child: FittedBox(
+                          child: Text(
+                            // Display the max streak value
+                            "${viewModel.maxHabitStreak}", 
+                            style: TextStyle(
+                              fontSize: 28, 
+                              color: viewModel.clrLvl3, // Highlight color
+                              fontWeight: FontWeight.bold
+                            )
+                          ),
+                        ),
                       ), 
+                    ), 
                     Expanded(
                       flex: 1,
                       child: Align(
                         alignment: Alignment.topCenter,
-                        child: FittedBox(child: Text("Total Tasks", style: TextStyle(fontSize: 16, color: viewModel.clrLvl4, fontWeight: FontWeight.w600)))),
-                    )],
+                        child: FittedBox(
+                          child: Text(
+                            "Current Streak 🔥", // Updated label
+                            style: TextStyle(
+                              fontSize: 16, 
+                              color: viewModel.clrLvl4, 
+                              fontWeight: FontWeight.w600
+                            )
+                          )
+                        )
+                      )
+                    )
+                  ],
                 ),
               ),
             ),
-        
-        
-        
-        
-        
-        
-        
-        
-            SizedBox(width: 20,),
-        // Remaining Tasks
+            
+            // Spacer
+            const SizedBox(width: 20),
+            
+            // Remaining Tasks Card
             Expanded(
               flex: 1,
               child: Container(
                 decoration: BoxDecoration(
                   color: viewModel.clrLvl2,
                   borderRadius: BorderRadius.circular(20)),
-                  child: Column(
-                    children: [
-                      Expanded(
-                        flex: 2,
-                        child: Align(
-                                    alignment: Alignment.center,
-                                    
-                                    
-                                    child: FittedBox(child: Text("${viewModel.numTasksRemaining}", style: TextStyle(fontSize: 28, color: viewModel.clrLvl3, fontWeight: FontWeight.bold)))),
+                child: Column(
+                  children: [
+                    Expanded(
+                      flex: 2,
+                      child: Align(
+                        alignment: Alignment.center,
+                        child: FittedBox(
+                          child: Text(
+                            "${viewModel.numTasksRemaining}", 
+                            style: TextStyle(
+                              fontSize: 28, 
+                              color: viewModel.clrLvl3, 
+                              fontWeight: FontWeight.bold
+                            )
+                          )
+                        ),
                       ), 
+                    ), 
                     Expanded(
                       flex: 1,
                       child: Align(
                         alignment: Alignment.topCenter,
-                        child: FittedBox(child: Text("Remaining Tasks", style: TextStyle(fontSize: 16, color: viewModel.clrLvl4, fontWeight: FontWeight.w600)))),
-                    )],
+                        child: FittedBox(
+                          child: Text(
+                            "Remaining Tasks", 
+                            style: TextStyle(
+                              fontSize: 16, 
+                              color: viewModel.clrLvl4, 
+                              fontWeight: FontWeight.w600
+                            )
+                          )
+                        )
+                      )
+                    )
+                  ],
                 ),
               ),
             ),

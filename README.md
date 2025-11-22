@@ -19,7 +19,3 @@ Language: Dart
 State Management: Provider (MVVM Architecture)
 
 UI Toolkit: Material Design + Custom Widgets
-<<<<<<< HEAD
-
-=======
->>>>>>> d50788b (Updated UI and fixed task model)

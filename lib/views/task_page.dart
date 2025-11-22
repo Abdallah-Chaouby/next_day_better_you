@@ -17,7 +17,7 @@ class TaskPage extends StatelessWidget {
             // Header View
           Expanded(flex: 1, child: HeaderView(),),
 
-          // Task List View-
+          // Task List View
           Expanded(flex: 1, child: TaskInfoView()),
 
           // Task list view

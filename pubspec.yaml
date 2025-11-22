@@ -4,12 +4,16 @@ publish_to: 'none'
 version: 0.1.0
 
 environment:
-  sdk: ^3.9.2
+  sdk: '>=3.9.2 <4.0.0' # Updated format for clarity
 
 dependencies:
   flutter:
     sdk: flutter
   provider: ^6.1.5+1
+  # --- ADDED FOR HABIT TRACKER ---
+  intl: ^0.19.0           # For DateFormat (to create the daily key)
+  shared_preferences: ^2.2.3 # For local persistence (to save daily status)
+  # ---------------------------------
 
 dev_dependencies:
   flutter_test:

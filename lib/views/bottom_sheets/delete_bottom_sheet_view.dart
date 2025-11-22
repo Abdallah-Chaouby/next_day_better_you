@@ -9,7 +9,7 @@ class DeleteBottomSheetView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Consumer<AppViewModel>(
       builder: (context, viewModel, child) {
-        return Container(
+        return SizedBox(
           height: 125,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
